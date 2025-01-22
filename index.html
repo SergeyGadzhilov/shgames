@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+          <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+          <meta name="format-detection" content="telephone=no">
+          <meta name="msapplication-tap-highlight" content="no">
+          <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+          <meta name="color-scheme" content="light dark">
+          <title>SHSolitaire</title>
+          <link rel="stylesheet" href="./assets/css/fontawesome.css">
+          <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="score_panel">
+      <div id="score" class="score_panel_item">Score: </div>
+      <div id="timer" class="score_panel_item">00:10</div>
+      <div id="moves" class="score_panel_item">Moves: </div>
+    </div>
+    <div class="content">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="controls">
+      <div id="new_game" class="button"><img src="./assets/img/new_game_button.png">New</div>
+      <div id="autocomplete" class="button_with_icon">
+        <div class="button_icon button_icon_autocomplete"><i class="fa-solid fa-wand-sparkles"></i></div>
+        <div class="button_label">Autocomplete</div>
+      </div>
+      <div id="revert" class="button"><img src="./assets/img/undo.png">Undo</div>
+      <div id="exit" class="button"><img src="./assets/img/exit_button.png">Exit</div>
+      <div class="bakcground"></div>
+    </div>
+    <div id="finish_dialog" class="finish_dialog">
+      <div class="finish_dialog_content">
+        <div class="ribbon">Your score</div>
+        <div class="score">
+          <div class="score_item">Score: <span id="finish_score">10</span></div>
+          <div class="score_item">Moves: <span id="finish_moves">56</span></div>
+          <div class="score_item">Time: <span id="finish_time">00:00:20</span></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
