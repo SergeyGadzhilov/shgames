@@ -16,6 +16,7 @@ export class SGGameTimer {
     }
 
     start() {
+        this.stop();
         this.startTime = Date.now();
         this.interval = setInterval(() => {
             this.distance = new Date(Date.now() - this.startTime);
