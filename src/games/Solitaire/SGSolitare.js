@@ -1,5 +1,5 @@
 import { SGMoveCardAnimation } from "../../engine/animation/SGMoveCardAnimation";
-import { Assets } from "../../engine/assets";
+import { assets } from "../../engine/assets";
 import { CARDS_VALUES } from "../../engine/cards/card";
 import { SGCardsFactory } from "../../engine/cards/SGCardsFactory";
 import { CARD_SUITS } from "../../engine/cards/SGCardSuit";
@@ -34,7 +34,6 @@ export class SGSolitare extends EventTarget {
         this.display = new Display("canvas");
         this.firework = new SGFireworkRunner();
         this.stage = new SGStage(this.display);
-        this.assets = new Assets();
         this.isStarted = false;
         this.score = new SGSolitareScore(this.decks);
         this.history = new SGHistory();
@@ -344,7 +343,7 @@ export class SGSolitare extends EventTarget {
         cards.push(`assets/cards/diamonds/diamonds.png`);
         cards.push(`assets/cards/hearts/hearts.png`);
         cards.push(`assets/cards/spades/spades.png`);
-        await this.assets.loadImages(cards);
+        await assets.loadImages(cards);
     }
 
     addCardsToMainDeck() {
@@ -353,26 +352,22 @@ export class SGSolitare extends EventTarget {
         for(let i = 1; i <= 13; ++i) {
             this.decks[DECKS.MAIN_DECK].add(factory.create({
                 suit: CARD_SUITS.CLUBS,
-                value: i,
-                assets: this.assets
+                value: i
             }));
 
             this.decks[DECKS.MAIN_DECK].add(factory.create({
                 suit: CARD_SUITS.DIAMONDS,
-                value: i,
-                assets: this.assets
+                value: i
             }));
 
             this.decks[DECKS.MAIN_DECK].add(factory.create({
                 suit: CARD_SUITS.HEARTS,
-                value: i,
-                assets: this.assets
+                value: i
             }));
 
             this.decks[DECKS.MAIN_DECK].add(factory.create({
                 suit: CARD_SUITS.SPADES,
-                value: i,
-                assets: this.assets
+                value: i
             }));
         }
         this.decks[DECKS.MAIN_DECK].shuffle();

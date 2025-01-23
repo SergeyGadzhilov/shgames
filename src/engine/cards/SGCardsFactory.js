@@ -1,3 +1,4 @@
+import { assets } from "../assets";
 import { SGResizableImage } from "../images/SGResizableImage";
 import { SGRectangle } from "../sgrectangle";
 import { Card, CARDS_VALUES } from "./card";
@@ -14,7 +15,7 @@ export class SGCardsFactory {
     getSmallImage(options) {
         const dir = directories[options.suit];
         return new SGResizableImage({
-            image: options.assets.getImage(`assets/cards/${dir}/${dir}.png`),
+            image: assets.getImage(`assets/cards/${dir}/${dir}.png`),
             borders: {x: 0, y: 0, width: 20, height: 20}
         });
     }
@@ -29,7 +30,7 @@ export class SGCardsFactory {
 
         const dir = directories[options.suit];
         return new SGResizableImage({
-            image: options.assets.getImage(`assets/cards/${dir}/${options.value}.png`),
+            image: assets.getImage(`assets/cards/${dir}/${options.value}.png`),
             borders: {x: 0, y: 0, width: 85, height: 80}
         });
     }
@@ -45,7 +46,7 @@ export class SGCardsFactory {
                 bigImage: this.getBigImage(options),
                 borders: new SGRectangle({x: 0, y: 0, width: 100, height: 130})
             }),
-            backImage: options.assets.getImage("assets/cards/cardback.png"),
+            backImage: assets.getImage("assets/cards/cardback.png"),
         });
     }
 }

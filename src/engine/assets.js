@@ -1,6 +1,6 @@
 import { SGImage } from "./images/sgimage";
 
-export class Assets {
+class Assets {
     constructor() {
         this.images = new Map();
     }
@@ -19,3 +19,5 @@ export class Assets {
         return this.images.get(image);
     }
 }
+
+export const assets = new Assets();
