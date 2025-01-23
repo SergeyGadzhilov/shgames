@@ -464,6 +464,8 @@ export class SGSolitare extends EventTarget {
     }
 
     revert() {
+        this.selected?.unselect();
+        this.selected = null;
         this.history.revert();
     }
 }
