@@ -203,8 +203,35 @@ canvas {
 .button_icon > i {
     width: 100%;
     text-align: center;
+    color: white;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .button_icon_autocomplete {
     background-image: linear-gradient(#b169ff, #653dbb);
+}
+
+.button_icon_revert {
+    background-image: linear-gradient(#33BDFF, #195FBD);
+}
+
+.button_icon_hint {
+    background-image: linear-gradient(#ffb000, #fd6f01);
+}
+
+.button_icon_new_game {
+    background-image: linear-gradient(#73ed44, #60BA3D);
+}
+.button_icon_new_game > i {
+    font-size: 20px;
+}
+
+.button_icon_exit {
+    background-image: linear-gradient(#FF3737, #BD3C18);
+}
+
+.button_icon_exit > i {
+    font-size: 24px;
+    font-weight: 900;
 }
