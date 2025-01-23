@@ -26,6 +26,11 @@ export class SGSolitareScore extends EventTarget {
             return;
         }
 
+        if (this.isFinishDeck(source) && this.isFinishDeck(target)) {
+            this.dispatchEvent(new CustomEvent("addScore", {detail: 0}));
+            return;
+        }
+
         if (this.isFinishDeck(source)) {
             this.dispatchEvent(new CustomEvent("addScore", {detail: -10}));
             return;
