@@ -21,13 +21,22 @@
       <canvas id="canvas"></canvas>
     </div>
     <div class="controls">
-      <div id="new_game" class="button"><img src="./assets/img/new_game_button.png">New</div>
+      <div id="new_game" class="button_with_icon">
+        <div class="button_icon button_icon_new_game"><i class="fa-solid fa-plus"></i></div>
+        <div class="button_label">New</div>
+      </div>
       <div id="autocomplete" class="button_with_icon">
         <div class="button_icon button_icon_autocomplete"><i class="fa-solid fa-wand-sparkles"></i></div>
         <div class="button_label">Autocomplete</div>
       </div>
-      <div id="revert" class="button"><img src="./assets/img/undo.png">Undo</div>
-      <div id="exit" class="button"><img src="./assets/img/exit_button.png">Exit</div>
+      <div id="revert" class="button_with_icon">
+        <div class="button_icon button_icon_revert"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div class="button_label">Revert</div>
+      </div>
+      <div id="exit" class="button_with_icon">
+        <div class="button_icon button_icon_exit"><i class="fa-solid fa-xmark"></i></div>
+        <div class="button_label">Exit</div>
+      </div>
       <div class="bakcground"></div>
     </div>
     <div id="finish_dialog" class="finish_dialog">

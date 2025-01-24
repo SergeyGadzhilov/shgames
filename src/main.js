@@ -32,7 +32,6 @@ controls.addEventListener("onAutocomplete", () => {
 });
 
 game.addEventListener("gamefinished", () => {
-    game.showFirework();
     scorePanel.stopGame();
     finishDialog.show(scorePanel.getScoreData());
     controls.hideAutocomplete();

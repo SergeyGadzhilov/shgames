@@ -5,7 +5,6 @@ import { SGCardsFactory } from "../../engine/cards/SGCardsFactory";
 import { CARD_SUITS } from "../../engine/cards/SGCardSuit";
 import { Deck } from "../../engine/deck";
 import { Display } from "../../engine/display";
-import { SGFireworkRunner } from "../../engine/fireworks/SGFireworkRunner";
 import { SGHistory } from "../../engine/history/SGHistory";
 import { SGDraggable } from "../../engine/SGDraggable";
 import { SGStage } from "../../engine/SGStage";
@@ -32,7 +31,6 @@ export class SGSolitare extends EventTarget {
     constructor() {
         super();
         this.display = new Display("canvas");
-        this.firework = new SGFireworkRunner();
         this.stage = new SGStage(this.display);
         this.isStarted = false;
         this.score = new SGSolitareScore(this.decks);
@@ -452,10 +450,6 @@ export class SGSolitare extends EventTarget {
             this.stage.update();
             window.requestAnimationFrame(() => this.update());
         }
-    }
-
-    showFirework() {
-        this.stage.push(this.firework);
     }
 
     revert() {

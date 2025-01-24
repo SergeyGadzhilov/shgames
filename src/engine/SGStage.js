@@ -1,11 +1,9 @@
-import { SGFirework } from "./fireworks/SGFirework";
 
 export class SGStage {
     constructor(display) {
         this.gameObjects = [];
         this.display = display;
         this.isDragging = false;
-        this.gameObjects.push(new SGFirework(0, this.display.canvas.height));
         this.initEventListeners();
     }
 
